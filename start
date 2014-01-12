@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Start on Linux, mostly under development mode
+# The Windows system is quite different - a build script that generates an installer
+
+# TODO: run the npm install, but somehow trick it into using nw-gyp instead of gyp; use that technique for the build script, too
+#npm install
+
+find . -name "*.styl" | grep -v node_modules | xargs stylus
+find . -name "*.jade" | grep -v node_modules | xargs jade
+./node-webkit/nw . --remote-debugging-port=9222 --enable-webgl --ignore-gpu-blacklist $@ 
