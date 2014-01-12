@@ -2,7 +2,7 @@
 {
   "main": "index.html",
   "name": "linvo-app-template",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "window": {
     "width": 960,
     "height": 600,
