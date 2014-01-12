@@ -7,6 +7,10 @@ html(ng-app)
     // Libraries
     script(src='assets/js/jquery-2.0.3.min.js')
     script(src='assets/js/angular.min.js')
+    
+    // Controllers
+    script(src='linvoApp.js')
 
-  body
+  body(ng-controller="linvoAppCtrl")
     h1 Linvo Application
+    {{message}}
