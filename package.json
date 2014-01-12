@@ -8,7 +8,7 @@
     "height": 600,
     "toolbar": false,
     "position": "center",
-    "frame": false
+    "frame": true
   },
   "chromium-args": "--enable-smooth-scrolling --enable-webgl --ignore-gpu-blacklist",
   "dependencies": {
