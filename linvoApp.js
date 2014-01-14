@@ -17,7 +17,7 @@ var ivo = new User({
     name: "Ivo",
     lastName: "Georgiev"
 });
-ivo.save();
+ivo.save(function(err, ids) { console.log(ids) });
 /* 
  */
 
