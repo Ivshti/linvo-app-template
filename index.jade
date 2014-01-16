@@ -23,4 +23,13 @@ html(ng-app="contacts")
 
   body(ng-controller="linvoAppCtrl")
     h1 Linvo Application
-    {{message}}
+    .row
+        .col-xs-4
+            form(role="form")
+                .form-group
+                    input.form-control(placeholder="first name",ng-model="selected.firstName")
+                    input.form-control(placeholder="last name",ng-model="selected.lastName")
+                .form-group
+                    input.form-control(placeholder="phone",type="tel",ng-model="selected.phone")
+                .form-group
+                    input.form-control(placeholder="birth date",type="date",ng-model="selected.birth")

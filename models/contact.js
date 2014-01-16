@@ -1,7 +1,7 @@
 var LinvoDB = require("linvodb");
 
 var Contact = new LinvoDB.Model("contact", {
-    name: String,
+    firstName: String,
     lastName: String,
     phone: String,
     birth: Date,
