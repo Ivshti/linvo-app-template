@@ -1,7 +1,7 @@
 
 {
   "main": "index.html",
-  "name": "linvo-app-template",
+  "name": "linvo-contacts",
   "version": "0.0.1",
   "window": {
     "width": 960,
@@ -16,7 +16,8 @@
   },
   "devDependencies": {
     "stylus": ">=0.42.0",
-    "jade": ">=1.1.4"
+    "jade": ">=1.1.4",
+    "bower": ">=1.2.8"
   },
   "private": true
 }

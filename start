@@ -4,6 +4,7 @@
 # The Windows system is quite different - a build script that generates an installer
 
 # TODO: run the npm install, but somehow trick it into using nw-gyp instead of gyp; use that technique for the build script, too
+#bower install
 #npm install
 
 find . -name "*.styl" | grep -v node_modules | xargs stylus
