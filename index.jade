@@ -39,6 +39,6 @@ html(ng-app="contacts")
             .contact(
                     ng-repeat="contact in contacts.res",
                     ng-class="{selected: contact._id == selected.contact._id}",
-                    ng-click="selected.contact = contact"
+                    ng-click="selected.contact = contact.copy()"
                 )
                 span {{contact.firstName}} {{contact.lastName}}
