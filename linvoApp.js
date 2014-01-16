@@ -6,9 +6,10 @@ var app = angular.module("contacts", []);
 
 app.controller("linvoAppCtrl", ["$scope", "contact", function($scope, contact)
 {
-    $scope.contacts = contact.live({});
+    $scope.contacts = contact.live({ });
     $scope.selected = { };
     
-    $scope.selected.contact = new contact(); // Selected contact
-    // ng-click=selected.save();
+    $scope.selected.contact = new contact(); // Selected contact    
+    
+    $scope.new = function() { $scope.selected.contact = new contact() };
 }]);

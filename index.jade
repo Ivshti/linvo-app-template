@@ -33,6 +33,7 @@ html(ng-app="contacts")
                 .form-group
                     input.form-control(placeholder="birth date",type="date",ng-model="selected.contact.birth")
                 button.btn.btn-success(ng-click="selected.contact.save()",type="button") Save
+                button.btn.btn-primary(ng-click="new()") New
         .col-xs-4
             h2 Contacts
             .contact(
