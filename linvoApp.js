@@ -6,11 +6,13 @@ var app = angular.module("contacts", []);
 
 app.controller("linvoAppCtrl", ["$scope", "contact", function($scope, contact)
 {
-    contact.find({}, function(err, contacts)
-    {
-        console.log(contacts);
-    });
-    contact.on("updated", function() { console.log("collection updated") });
+    $scope.contacts = [];
+
+    var update = function() { 
+        contact.find({ }, function(err, contacts) { $scope.contacts = contacts });
+    };
+    update();
+    contact.on("updated", update);
     
     $scope.selected = new contact(); // Selected contact
     // ng-click=selected.save();
