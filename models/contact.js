@@ -1,6 +1,4 @@
-var gui = require("nw.gui"); // in order to get the dataPath 
 var LinvoDB = require("linvodb");
-LinvoDB.init(gui.App.dataPath);
 
 var Contact = new LinvoDB.Model("contact", {
     name: String,
