@@ -26,14 +26,18 @@ html(ng-app="contacts")
         .col-xs-4
             form(role="form")
                 .form-group
-                    input.form-control(placeholder="first name",ng-model="selected.firstName")
-                    input.form-control(placeholder="last name",ng-model="selected.lastName")
+                    input.form-control(placeholder="first name",ng-model="selected.contact.firstName")
+                    input.form-control(placeholder="last name",ng-model="selected.contact.lastName")
                 .form-group
-                    input.form-control(placeholder="phone",type="tel",ng-model="selected.phone")
+                    input.form-control(placeholder="phone",type="tel",ng-model="selected.contact.phone")
                 .form-group
-                    input.form-control(placeholder="birth date",type="date",ng-model="selected.birth")
-                button.btn.btn-success(ng-click="selected.save()",type="button") Save
+                    input.form-control(placeholder="birth date",type="date",ng-model="selected.contact.birth")
+                button.btn.btn-success(ng-click="selected.contact.save()",type="button") Save
         .col-xs-4
             h2 Contacts
-            .contact(ng-repeat="contact in contacts")
+            .contact(
+                    ng-repeat="contact in contacts",
+                    ng-class="{selected: contact._id == selected.contact._id}",
+                    ng-click="selected.contact = contact"
+                )
                 span {{contact.firstName}} {{contact.lastName}}
