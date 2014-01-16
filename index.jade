@@ -22,7 +22,6 @@ html(ng-app="contacts")
     link(rel='stylesheet', href='stylesheets/linvoApp.css')
 
   body(ng-controller="linvoAppCtrl")
-    h1 Linvo Application
     .row
         .col-xs-4
             form(role="form")
@@ -34,3 +33,7 @@ html(ng-app="contacts")
                 .form-group
                     input.form-control(placeholder="birth date",type="date",ng-model="selected.birth")
                 button.btn.btn-success(ng-click="selected.save()",type="button") Save
+        .col-xs-4
+            h2 Contacts
+            .contact(ng-repeat="contact in contacts")
+                span {{contact.firstName}} {{contact.lastName}}

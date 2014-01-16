@@ -9,7 +9,7 @@ app.controller("linvoAppCtrl", ["$scope", "contact", function($scope, contact)
     $scope.contacts = [];
 
     var update = function() { 
-        contact.find({ }, function(err, contacts) { $scope.contacts = contacts });
+        contact.find({ }, function(err, contacts) { $scope.contacts = contacts; $scope.$apply() });
     };
     update();
     contact.on("updated", update);
