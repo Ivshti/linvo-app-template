@@ -11,6 +11,4 @@ var Contact = new LinvoDB.Model("contact", {
 //Contact.virtual("age")
 //Contact.virtual("fullName")
 
-
-var app = angular.module("contacts");
-LinvoDB.createService(app, Contact);
+LinvoDB.createService(angular.module("contacts"), Contact);

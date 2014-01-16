@@ -9,6 +9,6 @@ app.controller("linvoAppCtrl", ["$scope", "contact", function($scope, contact)
     });
     contact.on("updated", function() { console.log("collection updated") });
     
-    //$scope.current = new contact();
-    // ng-click=current.save();
+    $scope.selected = new contact(); // Selected contact
+    // ng-click=selected.save();
 }]);
