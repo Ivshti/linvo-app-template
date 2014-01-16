@@ -36,7 +36,7 @@ html(ng-app="contacts")
         .col-xs-4
             h2 Contacts
             .contact(
-                    ng-repeat="contact in contacts",
+                    ng-repeat="contact in contacts.res",
                     ng-class="{selected: contact._id == selected.contact._id}",
                     ng-click="selected.contact = contact"
                 )
