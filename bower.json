@@ -4,6 +4,7 @@
   "dependencies": {
     "angular": ">=1.2.9",
     "jquery": ">=2.0.3",
-    "bootstrap": ">=3.0.3"
+    "bootstrap": ">=3.0.3",
+    "font-awesome": ">=4.0.3"
   }
 }

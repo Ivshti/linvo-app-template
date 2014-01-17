@@ -11,6 +11,8 @@ html(ng-app="contacts")
     link(rel="stylesheet",href="bower_components/bootstrap/dist/css/bootstrap.min.css")
     link(rel="stylesheet",href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css")
     script(src="bower_components/bootstrap/dist/js/bootstrap.min.js")
+
+    link(rel="stylesheet",href="bower_components/font-awesome/css/font-awesome.min.css")
     
     // Controllers
     script(src='linvoApp.js')
@@ -41,4 +43,7 @@ html(ng-app="contacts")
                     ng-class="{selected: contact._id == selected.contact._id}",
                     ng-click="selected.contact = contact.copy()"
                 )
-                span {{contact.firstName}} {{contact.lastName}}
+                h3 
+                    span {{contact.firstName}} {{contact.lastName}}
+                    button.btn.btn-danger.pull-right(ng-click="contact.remove()")
+                        i.fa.fa-minus-circle
