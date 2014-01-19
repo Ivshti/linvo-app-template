@@ -1,11 +1,11 @@
 var LinvoDB = require("linvodb");
 
 var Contact = new LinvoDB.Model("contact", {
-    firstName: String,
-    lastName: String,
-    phone: String,
-    birth: Date,
-    //tags: [String]
+    firstName: "string",
+    lastName: "string",
+    phone: "string",
+    birth: "date",
+    tags: ["string"]
 });
 //Contact.virtual("age")
 //Contact.virtual("fullName")
