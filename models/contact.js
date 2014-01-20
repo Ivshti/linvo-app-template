@@ -8,7 +8,8 @@ var Contact = new LinvoDB.Model("contact", {
     birth: "date",
     tags: ["string"]
 });
-//Contact.virtual("age")
-//Contact.virtual("fullName")
+
+Contact.virtual("age", function() { return Math.floor((Date.now() - this.birth.getTime())/(365*24*60*60*1000)) });
+Contact.virtual("fullName", function() { return this.firstName+" "+this.lastName });
 
 LinvoDB.createService(angular.module("contacts"), Contact);
