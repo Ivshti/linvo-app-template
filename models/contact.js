@@ -12,4 +12,9 @@ var Contact = new LinvoDB.Model("contact", {
 Contact.virtual("age", function() { return Math.floor((Date.now() - this.birth.getTime())/(365*24*60*60*1000)) });
 Contact.virtual("fullName", function() { return this.firstName+" "+this.lastName });
 
+Contact.method("findSameName", function(cb) 
+{
+    Contact.find({ firstName: this.firstName, _id: { $ne: this._id } }, cb)
+});
+
 LinvoDB.createService(angular.module("contacts"), Contact);
