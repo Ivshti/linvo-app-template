@@ -31,6 +31,8 @@ html(ng-app="contacts")
                     input.form-control(placeholder="first name",ng-model="selected.contact.firstName")
                     input.form-control(placeholder="last name",ng-model="selected.contact.lastName")
                 .form-group
+                    input.form-control(placeholder="email",type="email",ng-model="selected.contact.email")
+                .form-group
                     input.form-control(placeholder="phone",type="tel",ng-model="selected.contact.phone")
                 .form-group
                     input.form-control(placeholder="position",type="tel",ng-model="selected.contact.position")
