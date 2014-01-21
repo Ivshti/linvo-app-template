@@ -1,6 +1,9 @@
 var gui = require("nw.gui"); // in order to get the dataPath 
 var LinvoDB = require("linvodb");
+var LinvoAPI = require("linvo-api4-client");
+
 LinvoDB.init(gui.App.dataPath);
+var linvoAPI = new LinvoAPI();
 
 var app = angular.module("contacts", []);
 

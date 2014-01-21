@@ -36,9 +36,6 @@ html(ng-app="contacts")
                     input.form-control(placeholder="position",type="tel",ng-model="selected.contact.position")
                 .form-group
                     input.form-control(placeholder="birth date",type="date",ng-model="selected.contact.birth")
-                .form-group
-                    span {{selected.contact.fullName}}
-                    span {{selected.contact.age}}
                 button.btn.btn-success(ng-click="selected.contact.save()",type="button") Save
                 button.btn.btn-primary(ng-click="new()") New
         .col-xs-4
