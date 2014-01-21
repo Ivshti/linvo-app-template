@@ -26,7 +26,7 @@ html(ng-app="contacts")
   body(ng-controller="linvoAppCtrl")
     .row
         .col-xs-4
-            form(role="form")
+            form#edit-contact(role="form")
                 .form-group
                     input.form-control(placeholder="first name",ng-model="selected.contact.firstName")
                     input.form-control(placeholder="last name",ng-model="selected.contact.lastName")
