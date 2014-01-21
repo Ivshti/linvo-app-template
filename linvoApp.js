@@ -9,6 +9,7 @@ var app = angular.module("contacts", []);
 
 app.controller("linvoAppCtrl", ["$scope", "contact", function($scope, contact)
 {
+    contact.setupSync(linvoAPI);
     $scope.contacts = contact.live({ });
     
     $scope.selected = { };
