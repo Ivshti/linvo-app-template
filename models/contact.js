@@ -18,6 +18,6 @@ Contact.method("findSameName", function(cb)
     Contact.find({ firstName: this.firstName, _id: { $ne: this._id } }, cb)
 });
 
-Contact.ensureIndex({ email: 1 });
+Contact.ensureIndex({ fieldName: "email", sparse: true, unique: true });
 
 LinvoDB.createService(angular.module("contacts"), Contact);
