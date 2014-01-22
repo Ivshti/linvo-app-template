@@ -3,7 +3,7 @@ var LinvoDB = require("linvodb");
 var Contact = new LinvoDB.Model("contact", {
     firstName: "string",
     lastName: "string",
-    email: "string",
+    email: { type: "string", index: true, unique: true, sparse: true },
     phone: "string", // NOTE: we need several phones ; and address
     position: "string", 
     birth: "date",
@@ -18,6 +18,7 @@ Contact.method("findSameName", function(cb)
     Contact.find({ firstName: this.firstName, _id: { $ne: this._id } }, cb)
 });
 
-Contact.ensureIndex({ fieldName: "email", sparse: true, unique: true });
+// Or, instead of what we have on the email field, we can do that
+//Contact.ensureIndex({ fieldName: "email", sparse: true, unique: true });
 
 LinvoDB.createService(angular.module("contacts"), Contact);
