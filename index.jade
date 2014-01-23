@@ -35,6 +35,8 @@ html(ng-app="contacts")
                 .form-group
                     input.form-control(placeholder="phone",type="tel",ng-model="selected.contact.phone")
                 .form-group
+                    input.form-control(placeholder="time to live (milliseconds)",type="number",ng-model="selected.contact._ttl")
+                .form-group
                     input.form-control(placeholder="position",type="tel",ng-model="selected.contact.position")
                 .form-group
                     input.form-control(placeholder="birth date",type="date",ng-model="selected.contact.birth")

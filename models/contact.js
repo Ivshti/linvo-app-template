@@ -15,7 +15,9 @@ Contact.virtual("fullName", function() { return this.firstName+" "+this.lastName
 
 Contact.method("findSameName", function(cb) 
 {
-    Contact.find({ firstName: this.firstName, _id: { $ne: this._id } }, cb)
+    // If we need to utilize another service in a method here, use:
+    // angular.element(document.body).injector().get("contact")
+    Contact.find({ firstName: this.firstName, _id: { $ne: this._id } }, cb);
 });
 
 // Or, instead of what we have on the email field, we can do that
