@@ -11,7 +11,8 @@ app.controller("linvoAppCtrl", ["$scope", "contact", function($scope, contact)
 {
     contact.setupSync(linvoAPI);
     $scope.contacts = contact.live({ });
-    
+    //$scope.contacts = contact.find({}).limit(5).sort({ _ctime: 1 }).live(); // we can do more advanced stuff
+
     $scope.selected = { };
     $scope.selected.contact = new contact(); // Selected contact    
     
