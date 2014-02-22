@@ -11,7 +11,7 @@ var app = angular.module("contacts", []);
 app.controller("linvoAppCtrl", ["$scope", "contact", function($scope, contact)
 {
     contact.setupSync(linvoAPI);
-    LinvoIPC.defineService("contacts", function() { return contact });
+    LinvoIPC.defineService("contacts", function() { angular.extend(this, contact) }, { weak: false });
     $scope.contacts = contact.live({ });
     //$scope.contacts = contact.find({}).limit(5).sort({ _ctime: 1 }).live(); // we can do more advanced stuff
 
